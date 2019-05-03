@@ -244,8 +244,7 @@ def security_schemes():
                 "flows": {
                     "password": {
                         # TODO why does this not work with a relative path?
-                        "tokenUrl": "https://"
-                        + url
+                        url
                         + app.config["SENTINEL_ROUTE_PREFIX"]
                         + app.config["SENTINEL_TOKEN_URL"],
                         "scopes": {},
