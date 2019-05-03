@@ -140,15 +140,15 @@ def _query_parameters():
     r = OrderedDict()
     r["in"] = "query"
     r["name"] = app.config["QUERY_WHERE"]
-    r["description"] = "the filters query parameter"
-    r["schema"] = {"type": "string", "example": '{"number": 10}'}
+    r["description"] = 'the filters query parameter (ex.: {"number": 10})'
+    r["schema"] = {"type": "string"}
     params["query__where"] = r
 
     r = OrderedDict()
     r["in"] = "query"
     r["name"] = app.config["QUERY_SORT"]
-    r["description"] = "the sort query parameter"
-    r["schema"] = {"type": "string", "example": "city,-lastname"}
+    r["description"] = 'the sort query parameter (ex.: "city,-lastname")'
+    r["schema"] = {"type": "string"}
     params["query__sort"] = r
 
     r = OrderedDict()
