@@ -236,7 +236,7 @@ def headers():
 
 def security_schemes():
     if app.config["SENTINEL_ROUTE_PREFIX"] is not None:
-        url = app.config.get(HOST) or "%s://%s" % (_get_scheme(), request.host)
+        url = app.config.get(HOST) or request.host
         return {
             "oAuth2": {
                 "type": "oauth2",
